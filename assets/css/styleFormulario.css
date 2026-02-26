@@ -1,0 +1,19 @@
+.btn-second {
+  position: absolute;
+  margin-left: 45px;
+  border-radius: 2rem;
+  padding: 0.8rem;
+  right: 12%;
+  background-color: #cc6e2f;
+  color: #fff;
+}
+
+.btn-first{
+    position: relative;
+    left: 0;
+    border-radius: 2rem;
+    padding: 0.8rem;
+    padding-right: 1rem;
+    background-color: #cc6e2f;
+    color: #fff;
+}
