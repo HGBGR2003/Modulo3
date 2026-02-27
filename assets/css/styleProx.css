@@ -1,0 +1,25 @@
+body {
+  background-color: #f5e6d3;
+}
+
+.jumbotron {
+  background-color: brown;
+  color: #fff;
+  border-radius: 12px;
+  margin-top: 3rem;
+  padding: 3rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.jumbotron h1 {
+  color: chocolate;
+  font-weight: 700;
+}
+
+.jumbotron hr {
+  border-color: chocolate;
+}
+
+.jumbotron p {
+  color: #f5e6d3;
+}

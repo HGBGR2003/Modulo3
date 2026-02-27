@@ -1,70 +1,71 @@
 <!DOCTYPE html>
-<html lang="pt-Br">
-
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página com formulário</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
+    <title>Formulário do Brabo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/styleFormulario.css">
 </head>
-
 <body>
-    <main class="container">
-        <form>
-            <div class="jumbotron">
-                <h1 class="display-4">Formulario do Brabo</h1>
-                <p class="lead">Com nome, email, data e peso</p>
-                <hr class="my-4">
+    <main>
+        <div class="form-header">
+            <span class="tag">Cadastro</span>
+            <h1>Formulário <em>do Brabo</em></h1>
+            <p>Preencha os campos abaixo para prosseguir.</p>
+        </div>
+
+        <form action="proximo.html" method="get">
+            <div class="form-card">
 
                 <div class="form-group">
-                    <label for="my-input">Nome do Usuário:</label>
-                    <input id="my-input" class="form-control us-1" type="text" name="nome"
-                        placeholder="Digite seu nome aqui">
-                </div>
-                <div class="form-group">
-                    <label for="my-input">Senha:</label>
-                    <input id="my-input" class="form-control sh" type="password" name="senha"
-                        placeholder="Digite sua senha">
-                </div>
-                <div class="form-group">
-                    <label for="my-input">Data</label>
-                    <input id="my-input" class="form-control" type="text" name="data" placeholder="Selecione uma data"
-                        data-coreui-toggle="date-picker" data-coreui-locale="pt-BR"
-                        data-coreui-input-format="DD/MM/YYYY" data-coreui-footer="true">
+                    <label for="input-nome">Nome do Usuário</label>
+                    <div class="input-wrap">
+                        <span class="icon">👤</span>
+                        <input id="input-nome" type="text" name="nome" placeholder="Digite seu nome aqui" autocomplete="name">
+                    </div>
+                    <div class="field-msg" id="msg-nome">Por favor, insira seu nome.</div>
                 </div>
 
                 <div class="form-group">
-                    <label for="my-input"> Peso: </label>
-                    <input id="my-input" class="form-control ps" type="text" name="peso"
-                        placeholder="Seu peso por favor?">
+                    <label for="input-senha">Senha</label>
+                    <div class="input-wrap">
+                        <span class="icon">🔒</span>
+                        <input id="input-senha" type="password" name="senha" placeholder="Digite sua senha" autocomplete="new-password">
+                        <button type="button" class="toggle-pw" id="toggleSenha" aria-label="Mostrar/ocultar senha">👁️</button>
+                    </div>
+                    <div class="field-msg" id="msg-senha">A senha deve ter ao menos 6 caracteres.</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="input-data">Data</label>
+                    <div class="input-wrap">
+                        <span class="icon">📅</span>
+                        <input id="input-data" type="date" name="data">
+                    </div>
+                    <div class="field-msg" id="msg-data">Selecione uma data válida.</div>
+                </div>
+
+                <hr class="divider">
+
+                <div class="form-group">
+                    <label for="input-peso">Peso (kg)</label>
+                    <div class="input-wrap">
+                        <span class="icon">⚖️</span>
+                        <input id="input-peso" type="number" name="peso" placeholder="Ex: 72.5" min="1" max="500" step="0.1">
+                    </div>
+                    <div class="field-msg" id="msg-peso">Insira um peso válido (1–500 kg).</div>
                 </div>
 
             </div>
-            <a href="index.html">
-                <button class="btn-first" type="button">
-                    Voltar
-                </button>
-            </a>
-            <a href="proximo.html">
-                <button class="btn-second" type="button">
-                    Prosseguir
-                </button>
-            </a>
+
+            <div class="btn-row">
+                <a href="index.html" class="btn btn-back">← Voltar</a>
+                <button href="proximo.html" type="submit" class="btn btn-next">Prosseguir</button>
+            </div>
         </form>
-
     </main>
-</body>
 
+</body>
 </html>
